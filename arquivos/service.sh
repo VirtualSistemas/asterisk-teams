@@ -1,4 +1,7 @@
 #!/bin/bash
+
+trap 'echo EXIT; [[ RA-TA-TA-TA ]] && pkill asterisk; exit' EXIT
+
 echo "INICIANDO ASTERISK......"
 [[ -z "$DOMINIO" ]] && { echo "Erro: Dominio nao configurado"; exit 1; }
 [[ -z "$PORTA_TLS" ]] && { echo "Erro: Porta TLS nao configurada"; exit 1; }
