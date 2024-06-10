@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  asterisk:
+    image: vsgroup/asterisk-teams
+    container_name: asterisk-teams
+    network_mode: host
+    restart: always
+    environment:
+      - "PORTA_TLS=5061"
+      - "PORTA_UDP=5060"
+      - "RTP_INICIO=10000"
+      - "RTP_FIM=20000"
+      - "TRONCO_HOST=XXX.XXX.XXX.XXX"
+      - "TRONCO_PORTA=5060"
+      - "DOMINIO=fqdn.dominio.com.br"
+    volumes:
+      - /home/rocky/certs:/etc/asterisk/certs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "10"

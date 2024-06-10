@@ -1,0 +1,5 @@
+set eep.listen on
+set eep.listen.address 172.17.0.1
+set eep.listen.port 9061
+set eep.listen.pass senha
+set eep.listen.uuid on
