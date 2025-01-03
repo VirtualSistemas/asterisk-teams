@@ -43,4 +43,4 @@ sed -i "s/ASTERISK_RTP_INICIO/$RTP_INICIO/g" /etc/asterisk/rtp.conf
 sed -i "s/ASTERISK_RTP_FIM/$RTP_FIM/g" /etc/asterisk/rtp.conf
 
 
-/usr/sbin/asterisk -cv
+/usr/sbin/asterisk -f
